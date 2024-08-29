@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Villes</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion des Parcs</h1>
+        <label for="select-map">Sélectionner la Carte :</label>
+        <select id="select-map">
+            <option value="royalKids">Royal Kids</option>
+            <option value="urbanJump">Urban Jump</option>
+        </select>
+    </header>
+    <main>
+        <div id="map-royalKids" class="map"></div>
+        <div id="map-urbanJump" class="map" style="display:none;"></div> <!-- Masqué par défaut -->
+        <div id="controls">
+            <h2>Options</h2>
+            <label for="main-city">Ville Mère :</label>
+            <input type="text" id="main-city" placeholder="Sélectionnez une ville">
+            <button id="select-city">Sélectionner la Ville du Parc</button>
+
+            <label for="zone-city">Ajouter une Ville de Chalandise :</label>
+            <input type="text" id="zone-city" placeholder="Ajouter une ville">
+            <button id="add-zone-city">Ajouter</button>
+        </div>
+        <div id="city-menu">
+            <h3>Villes et Zones de Chalandise</h3>
+            <ul id="city-list"></ul>
+        </div>
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
